@@ -1,0 +1,4 @@
+.project
+.settings/
+target/
+bower_components/
