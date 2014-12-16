@@ -5,8 +5,7 @@
 	<artifactId>ng-spring-boot</artifactId>
 	<version>1.0.0</version>
 	<name>ng-spring-boot</name>
-	<packaging>war</packaging>
-
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
