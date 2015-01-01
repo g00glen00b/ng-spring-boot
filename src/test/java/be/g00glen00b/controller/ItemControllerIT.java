@@ -23,7 +23,7 @@ import com.jayway.restassured.http.ContentType;
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
-public class ItemControllerIntegrationTest {   
+public class ItemControllerIT {   
   private static final String CHECKED_FIELD = "checked";
   private static final String DESCRIPTION_FIELD = "description";
   private static final String ITEMS_RESOURCE = "/items";

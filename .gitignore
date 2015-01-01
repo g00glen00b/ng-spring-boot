@@ -1,5 +1,7 @@
 .project
 .classpath
+.mavenrc
 .settings/
 target/
 bower_components/
+/ng-spring-boot
