@@ -4,11 +4,17 @@ describe('The application controller', function() {
   var ITEM1 = {
     id: 1,
     description: 'My first item',
-    checked: false
+    checked: false,
+    $remove: function(callback) {
+      callback();
+    }
   }, ITEM2 = {
     id: 2,
     description: 'My second item',
-    checked: true
+    checked: true,
+    $remove: function(callback) {
+      callback();
+    }
   }, DESCRIPTION = "A description";
   
   beforeEach(module('myApp.controllers'));
@@ -66,9 +72,6 @@ describe('The application controller', function() {
   it('should remove the item from the list when it\'s deleted', function() {
     // When there are two items and ITEM1 is removed
     $scope.items = [ITEM1, ITEM2];
-    ITEM1.$remove = function(callback) {
-      callback();
-    };
     $scope.deleteItem(ITEM1);
     
     expect($scope.items.length).toBe(1);

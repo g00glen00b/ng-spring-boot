@@ -14,10 +14,10 @@
 
 	<properties>
 		<assertj.version>1.7.0</assertj.version>
-		<mockito.version>1.10.8</mockito.version>
 		<rest-assured.version>2.4.0</rest-assured.version>
 
 		<unit-tests.skip>false</unit-tests.skip>
+		<js-tests.skip>false</js-tests.skip>
 		<integration-tests.skip>true</integration-tests.skip>
 
 		<bower-components>${basedir}/src/main/resources/static/bower_components</bower-components>
@@ -28,6 +28,7 @@
 			<id>integration</id>
 			<properties>
 				<unit-tests.skip>false</unit-tests.skip>
+				<js-tests.skip>false</js-tests.skip>
 				<integration-tests.skip>false</integration-tests.skip>
 			</properties>
 		</profile>
@@ -74,6 +75,7 @@
 				</executions>
 				<configuration>
 					<version>1.9.8</version>
+					<skip>${js-tests.skip}</skip>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -145,8 +147,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>${mockito.version}</version>
+			<artifactId>mockito-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.jayway.restassured</groupId>
