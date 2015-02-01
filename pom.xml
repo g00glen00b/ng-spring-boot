@@ -15,6 +15,8 @@
 	<properties>
 		<assertj.version>1.7.0</assertj.version>
 		<rest-assured.version>2.4.0</rest-assured.version>
+		<dbunit.version>2.5.0</dbunit.version>
+		<spring-test-dbunit.version>1.2.1</spring-test-dbunit.version>
 
 		<unit-tests.skip>false</unit-tests.skip>
 		<js-tests.skip>false</js-tests.skip>
@@ -144,15 +146,29 @@
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
 			<version>${assertj.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.jayway.restassured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>${rest-assured.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.github.springtestdbunit</groupId>
+			<artifactId>spring-test-dbunit</artifactId>
+			<version>${spring-test-dbunit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>${dbunit.version}</version>
 		</dependency>
 	</dependencies>
 </project>
