@@ -34,7 +34,7 @@ public class ItemRepositoryIT {
   private ItemRepository repository;
 
   @Test
-  public void test() {
+  public void findCheckedShouldReturnTwoItems() {
     assertThat(repository.findChecked())
       .hasSize(2)
       .extracting(DESCRIPTION_FIELD)
