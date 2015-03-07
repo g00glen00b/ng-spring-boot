@@ -5,6 +5,7 @@
 	<artifactId>ng-spring-boot</artifactId>
 	<version>1.0.0</version>
 	<name>ng-spring-boot</name>
+	<packaging>war</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,6 +18,8 @@
 		<rest-assured.version>2.4.0</rest-assured.version>
 		<dbunit.version>2.5.0</dbunit.version>
 		<spring-test-dbunit.version>1.2.1</spring-test-dbunit.version>
+		<fluentlenium.version>0.10.3</fluentlenium.version>
+		<xml-apis.version>1.4.01</xml-apis.version>
 
 		<unit-tests.skip>false</unit-tests.skip>
 		<js-tests.skip>false</js-tests.skip>
@@ -124,6 +127,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
@@ -169,6 +177,22 @@
 			<groupId>org.dbunit</groupId>
 			<artifactId>dbunit</artifactId>
 			<version>${dbunit.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.fluentlenium</groupId>
+			<artifactId>fluentlenium-assertj</artifactId>
+			<version>${fluentlenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.detro</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>${xml-apis.version}</version>
 		</dependency>
 	</dependencies>
 </project>
