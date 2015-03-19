@@ -2,14 +2,18 @@ package be.g00glen00b.functional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.fluentlenium.adapter.FluentTest;
 import org.junit.*;
+import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.boot.test.*;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -40,8 +44,25 @@ public class ApplicationIT extends FluentTest {
   private ItemRepository repository;
   @Value("${local.server.port}")
   private int serverPort;
-  private WebDriver webDriver = new PhantomJSDriver();
+  private WebDriver webDriver;
   
+  public ApplicationIT() {
+      String PhantomJSBinaryPath = System.getenv("phantomjs.binary.path");
+      
+      assertNotNull("phantomjs.binary.path is not set", PhantomJSBinaryPath);
+      assertTrue("phantomjs.binary.path is not an existing file", new File(PhantomJSBinaryPath).exists());
+      
+      DesiredCapabilities capabilities = new DesiredCapabilities();
+      capabilities.setJavascriptEnabled(true);
+      capabilities.setCapability("takesScreenshot", false);
+      capabilities.setCapability(
+          PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
+          PhantomJSBinaryPath
+      );
+
+      webDriver = new PhantomJSDriver(capabilities);
+  }
+      
   @Before
   public void setUp() {
     repository.deleteAll();
