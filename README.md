@@ -40,7 +40,12 @@ cd target
 java -jar ng-spring-boot-1.0.0.jar
 ```
 
-## Links
+## Related articles
 
-- http://g00glen00b.be/testing-spring-data-repository/
+- [Rapid prototyping with Spring Boot and AngularJS](http://g00glen00b.be/prototyping-spring-boot-angularjs/)
+- [Easy integration testing with Spring Boot and REST-Assured](http://g00glen00b.be/spring-boot-rest-assured/)
+- [Unit testing with Mockito and AssertJ](http://g00glen00b.be/unit-testing-mockito-assertj/)
+- [Executing Jasmine tests with Maven](http://g00glen00b.be/jasmine-tests-maven/)
+- [Testing your Spring Data JPA repository](http://g00glen00b.be/spring-boot-selenium/)
+- [Testing your Spring Boot application with Selenium](http://g00glen00b.be/testing-spring-data-repository/)
 
