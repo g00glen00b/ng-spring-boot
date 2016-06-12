@@ -40,3 +40,7 @@ cd target
 java -jar ng-spring-boot-1.0.0.jar
 ```
 
+## Links
+
+- http://g00glen00b.be/testing-spring-data-repository/
+
