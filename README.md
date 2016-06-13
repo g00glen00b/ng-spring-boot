@@ -46,6 +46,6 @@ java -jar ng-spring-boot-1.0.0.jar
 - [Easy integration testing with Spring Boot and REST-Assured](http://g00glen00b.be/spring-boot-rest-assured/)
 - [Unit testing with Mockito and AssertJ](http://g00glen00b.be/unit-testing-mockito-assertj/)
 - [Executing Jasmine tests with Maven](http://g00glen00b.be/jasmine-tests-maven/)
-- [Testing your Spring Data JPA repository](http://g00glen00b.be/spring-boot-selenium/)
-- [Testing your Spring Boot application with Selenium](http://g00glen00b.be/testing-spring-data-repository/)
+- [Testing your Spring Data JPA repository](http://g00glen00b.be/testing-spring-data-repository/)
+- [Testing your Spring Boot application with Selenium](http://g00glen00b.be/spring-boot-selenium/)
 
